@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 
-public class App
+public class App implements AutoCloseable
 {
     private final MulticastSocket socket;
     private final InetSocketAddress mcastAddr;
@@ -82,5 +82,10 @@ public class App
             updateAlive(recv);
             printAlive();
         }
+    }
+
+    @Override
+    public void close() {
+        this.socket.close();
     }
 }
