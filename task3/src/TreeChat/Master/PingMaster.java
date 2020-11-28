@@ -52,7 +52,6 @@ public class PingMaster extends TimerTask {
             }
         }
         if (parentIsDead) {
-            System.out.println("Parent is dead.");
             swapParent();
         }
     }
