@@ -1,0 +1,11 @@
+package TreeChat.Message;
+
+public enum MessageType {
+    CHAT_MESSAGE,
+    ADOPT_CHILD_MESSAGE,
+    ACCEPT_CHILD_MESSAGE,
+    PING_MESSAGE,
+    ACCEPT_CHAT_MESSAGE,
+    SEND_FOSTER_MESSAGE,
+    CONFIRM_FOSTER_MESSAGE
+}
