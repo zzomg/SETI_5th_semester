@@ -18,9 +18,9 @@ public class Proxy
     public void start()
     {
         try(Selector selector = Selector.open();
-            ServerSocketChannel serverSocketChannel = ServerSocketChannel.open())
+            ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
+            DatagramChannel datagramSocket = DatagramChannel.open())
         {
-            DatagramChannel datagramSocket = DatagramChannel.open();
             datagramSocket.configureBlocking(false);
 
             DnsService dnsService = DnsService.getInstance();
